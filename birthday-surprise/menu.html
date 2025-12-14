@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂สุขสันวันเกิด อุ๋งอิ๋ง🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-overlay">
+        <div class="welcome-text">
+            <h1>เย้ หนูผ่านแล้วเก่งมากกก</h1>
+            <p>จิ้มแล้วไปต่อกันเลยยย</p>
+        </div>
+    </div>
+
+    <div id="background-hearts"></div>
+
+    <audio id="birthday-song" loop>
+        <source src="your_song.MP3" type="audio/mpeg">
+    </audio>
+    <audio id="click-sound">
+        <source src="click-sound.MP3" type="audio/mpeg">
+    </audio>
+    <audio id="blow-sound">
+        <source src="blow-sound.MP3" type="audio/mpeg">
+    </audio>
+<audio id="flip-sound"><source src="flip-sound.MP3" type="audio/mpeg"></audio>
+<audio id="match-sound"><source src="match-sound.MP3" type="audio/mpeg"></audio>
+<audio id="no-match-sound"><source src="no-match-sound.MP3" type="audio/mpeg"></audio>
+<audio id="win-sound"><source src="win-sound.MP3" type="audio/mpeg"></audio>
+<audio id="hbd-song" loop><source src="hbd_song.MP3" type="audio/mpeg"></audio>
+<audio id="hbd-wish"><source src="hbd_wish.MP3" type="audio/mpeg"></audio>
+    <div id="main-menu-page" class="page active">
+        <div class="main-card">
+            <div class="image-container">
+                <img src="main-pic.jpg" alt="Our Picture">
+                <div class="love-message">
+                    <h1>🎁ของขวัญสำหรับหนูนะคั้บ🎁</h1>
+                    <p>💕เป็นสิ่งที่ไม่ได้มีราคามากแต่พี่อยากทำให้หนูนะคั้บ💕</p>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <a href="#memories" class="menu-button nav-link">💌 สตอรี่ของคนน่ารัก 💌</a>
+                <a href="#calendar" class="menu-button nav-link">🗓️ ปฏิทิน นับถอยหลังวันครบรอบ 🗓️</a>
+                <a href="#puzzle" class="menu-button nav-link">🧩 เล่นเกมกัน (เพื่อเปิดจดหมาย) 🧩</a>
+                <a id="open-letter-modal" class="menu-button">✉️ จดหมายให้หนูอุ๋งอิ๋ง ✉️</a>
+                <a href="#cake" class="menu-button nav-link">🎂 มาเป่าเค้กกันนนนน 🎂</a>
+                                <a href="#proposal" class="menu-button nav-link">💍พี่อยากบอกว่า💍</a> </nav>
+            </nav>
+        </div>
+    </div>
+
+    <div id="memories-page" class="page">
+        <div class="memories-container">
+            <h1>เลื่อนดูสตอรี่ของอุ๋งอิ๋ง</h1>
+            <p>ปัดซ้าย-ขวา ดูสตอรี่ของเจ้าอุ๋ง</p>
+            <div class="story-scroller">
+                <div class="story-card"><img src="memories1.jpg" alt="Memory 1"><p class="story-caption">รูปแรกเลยชอบมากๆเจ้าขนมเปี๊ยะ</p></div>
+                <div class="story-card"><img src="memories2.jpg" alt="Memory 2"><p class="story-caption">แว่นจะน่ารักเกินไปละนะ</p></div>
+                <div class="story-card"><img src="memories3.jpg" alt="Memory 3"><p class="story-caption">ยิ้มสิพี่ชอบหนูยิ้มนะน่ารักที่สุด</p></div>
+                <div class="story-card"><img src="memories4.jpg" alt="Memory 4"><p class="story-caption">แบร่ น่ารักมากๆเลยรูปนี้</p></div>
+                <div class="story-card"><img src="memories5.jpg" alt="Memory 5"><p class="story-caption">ขอบคุณที่ยังอยู่กับพี่นะ</p></div>
+                <div class="story-card"><img src="memories6.jpg" alt="Memory 6"><p class="story-caption">HBD เจ้าหนูอุ๋ง</p></div>
+                <div class="story-card"><img src="memories7.jpg" alt="Memory 7"><p class="story-caption">ขอให้ปีนี้ละปีต่อๆไป</p></div>
+                <div class="story-card"><img src="memories8.jpg" alt="Memory 8"><p class="story-caption">มีความสุขมากๆนะ</p></div>
+                <div class="story-card"><img src="memories9.jpg" alt="Memory 9"><p class="story-caption">ยิ้มเยอะๆแล้วมั่นใจในตัวเองด้วย</p></div>
+                <div class="story-card"><img src="memories10.jpg" alt="Memory 10"><p class="story-caption">รักที่สุดเลยนะ สุขสันข์วันเกิดคั้บ</p></div>
+            </div>
+            <a href="#main-menu" class="back-button nav-link">กลับหน้าหลัก</a>
+        </div>
+    </div>
+
+    <div id="calendar-page" class="page">
+        <div class="calendar-container">
+            <h1>🗓️ ปฏิทินของหนูอุ๋งอิ๋ง 🗓️</h1>
+            <p>⏳ นับถอยหลังสู่วันครบรอบ (กดที่รูปเพื่อดูเรื่องราวรายเดือนคั้บ)</p>
+            <img src="calendar-pic.jpg" alt="Calendar Pic" class="calendar-img clickable" id="open-monthly-modal">
+            <div id="countdown" class="countdown">
+                <div><span id="days"></span> Days</div>
+                <div><span id="hours"></span> Hours</div>
+                <div><span id="minutes"></span> Minutes</div>
+                <div><span id="seconds"></span> Seconds</div>
+            </div>
+<hr class="calendar-divider"> <p>⌚️ เวลาที่เราอยู่ด้วยกัน ⌚️</p>
+<div id="time-since" class="countdown since">
+    <div><span id="since-days"></span> Days</div>
+    <div><span id="since-hours"></span> Hours</div>
+    <div><span id="since-minutes"></span> Minutes</div>
+    <div><span id="since-seconds"></span> Seconds</div>
+</div>
+            <a href="#main-menu" class="back-button nav-link">กลับหน้าหลัก</a>
+        </div>
+        <div id="monthly-modal-overlay" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-button" id="close-monthly-modal">&times;</span>
+                <h2>ความทรงจำในแต่ละเดือนเราค่อยๆเพิ่มกันนะ</h2>
+                <div class="monthly-gallery">
+                    <div class="monthly-image-display"><img src="jan.jpg" id="monthly-image" alt="Monthly Memory"></div>
+                    <div class="month-grid" id="month-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="puzzle-page" class="page">
+        <div class="puzzle-page-content">
+            <h1>เกมจับคู่สติ๊กเกอร์หนูอุ๋งอิ๋ง</h1>
+            <p>จับคู่ให้ครบ 8 คู่ จะได้รหัสเปิดจดหมาย 🔐</p>
+            <div class="puzzle-container" id="puzzle-container"></div>
+            <p id="win-message" class="win-message"></p>
+            <a href="#main-menu" class="back-button nav-link">กลับหน้าหลัก</a>
+        </div>
+    </div>
+
+    <div id="letter-page" class="page">
+        <div class="envelope-wrapper">
+            <div class="envelope-body"></div>
+            <div class="envelope-flap"></div>
+            <div class="letter-inside"><p>ถึง: หนูอุ๋งอิ๋ง ❤️</p></div>
+            <div class="open-text"><p>จิ้มอ่านจดหมาย</p></div>
+        </div>
+        <div id="letter-content" class="letter-content hidden">
+            <h2>ถึง: เจ้าอุ๋งอิ๋ง 💞
+            <p>สุขสันต์วันเกิดนะคั้บ ขอให้มีความสุขมากๆ สุขภาพแข็งแรง ยิ้มเยอะๆในทุกๆวันนะคั้บชอบอะไรก็ทำเลยขอแค่มีความสุขก็พอ ไม่ว่าหนูจะเป็นยังไงพี่ก็ยังชอบหนูที่เป็นหนู ขอบคุณที่เข้ามาเป็นสิ่งดีๆในชีวิตพี่นะ<br><br>❤️รัก❤️<br></p>
+            <p class="signature">จาก, คนที่รักหนูที่สุด</p>
+            <a href="#main-menu" class="back-button nav-link">กลับหน้าหลัก</a>
+        </div>
+    </div>
+
+    <div id="cake-page" class="page">
+        <div class="cake-game-container">
+            <h1>เป่าเทียนวันเกิดกัน!</h1>
+            <p>คลิกที่เปลวเทียนเพื่อเป่าให้ดับนะ</p>
+            <div class="cake-container">
+                <img src="cake.png" alt="Birthday Cake">
+            </div>
+            <div id="cake-win-message" class="win-message hidden">🎉 สุขสันต์วันเกิดนะค้าบ! 🎉โตขึ้นอีกปีแล้ว มีความสุขมากๆนะ</div>
+            <a href="#main-menu" class="back-button nav-link">กลับหน้าหลัก</a>
+        </div>
+        <div id="confetti-container"></div>
+    </div>
+<div id="letter-password-overlay" class="modal-overlay">
+    <div class="modal-content letter-password-modal">
+        <h3>รหัสลับสำหรับอ่านจดหมาย</h3>
+        <p>ใส่รหัสผ่าน 6 หลัก (รหัสได้จากการเล่นเกมจับคู่)</p>
+        <input type="password" id="letter-password-input" class="password-input" maxlength="6">
+        <div class="modal-buttons">
+            <button id="letter-password-cancel" class="modal-btn cancel">ยกเลิก</button>
+            <button id="letter-password-ok" class="modal-btn ok">ตกลง</button>
+        </div>
+    </div>
+</div>
+<div id="proposal-page" class="page">
+    <div id="proposal-intro-text" class="proposal-intro">
+        <p class="intro-line">มาถึงจนวันนี้</p>
+        <p class="intro-line">อยากให้หนูมีความสุขในทุกๆวัน</p>
+                <p class="intro-line">ไม่ใช่แค่วันนี้หรือบางวัน</p>
+                <p class="intro-line">สุดท้ายนี้</p>
+                <p class="intro-line">พี่อยากถามหนู</p>
+                <p class="intro-line">ว่า</p>
+                <p class="intro-line">เรา</p>
+        <p class="intro-line question">เป็นแฟนกันนะ?❤️(พี่อยากมีหนูอยู่ในชีวิตนะ)</p>
+    </div>
+
+    <form id="proposal-form" class="proposal-container hidden" action="https://formspree.io/f/xpwynvya" method="POST"> 
+        <h1>คำถามสำคัญ...</h1> 
+        <p class="question-in-form">(จากคำถามเมื่อสักครู่...)</p> 
+
+        <input type="hidden" name="_subject" value="คำตอบสำหรับคำถามสำคัญ ❤️">
+        <textarea id="proposal-response" name="response" rows="4" placeholder="พิมพ์คำตอบตรงนี้..." required></textarea> 
+        <button type="submit" class="send-button">ส่งคำตอบให้พี่หน่อยนะ</button> 
+        <a href="#main-menu" class="back-button nav-link">กลับหน้าหลัก</a>
+    </form>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
